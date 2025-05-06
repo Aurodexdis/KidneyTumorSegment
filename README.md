@@ -1,14 +1,14 @@
 # Kidney Tumor Segmentation Project
 
-This repository contains code for automated kidney and tumor segmentation in CT images using the KiTS19 dataset, comparing adaptive thresholding and U-Net approaches.
+This repository contains Python code used for kidney and tumor segmentation in CT images using the KiTS19 dataset, comparing adaptive thresholding and U-Net approaches.
 
 ## Project Overview
 
-This project implements and evaluates two distinct approaches for kidney and tumor segmentation from abdominal CT images:
+This project implements and evaluates two approaches for kidney and tumor segmentation of abdominal CT images:
 1. An anatomically-constrained adaptive thresholding method
 2. A deep learning solution using the U-Net architecture
 
-The implementation extracts 2D axial slices at the maximum tumor cross-sectional area from each 3D volume, preprocesses them using windowing and normalization, and evaluates segmentation performance using metrics such as Dice coefficient, precision, and recall.
+The implementation extracts 2D axial slices at the maximmal tumor cross-sectional area from each 3D volume, preprocesses them using windowing and normalization, and evaluates segmentation performance using metrics such as Dice coefficient, precision, and recall.
 
 ## Repository Structure
 
@@ -18,7 +18,7 @@ The implementation extracts 2D axial slices at the maximum tumor cross-sectional
 
 - **eda.py**: Performs exploratory data analysis on the KiTS19 dataset, analyzing dataset structure, case dimensions, tumor distribution, and sample visualizations.
 
-- **slice_extraction.py**: Extracts 2D slices from 3D CT volumes at the maximum tumor cross-sectional area, generating a dataset of representative slices for each case.
+- **slice_extraction.py**: Extracts 2D slices from 3D CT volumes at the maximmal tumor cross-sectional area, generating a dataset of representative slices for each case.
 
 - **preprocess.py**: Preprocesses the extracted 2D slices using windowing to enhance kidney/tumor contrast and normalization to standardize image intensity distributions.
 
@@ -34,7 +34,7 @@ The implementation extracts 2D axial slices at the maximum tumor cross-sectional
 
 ### Jupyter Notebook
 
-- **final_proj_copy.ipynb**: Main notebook that orchestrates the entire workflow, calling the individual Python scripts sequentially and displaying results at each stage of the pipeline.
+- **kidney_tumor_segment.ipynb**: Main Python notebook that runs the full workflow, calling the individual Python scripts sequentially and displaying results at each stage of the pipeline.
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ The implementation extracts 2D axial slices at the maximum tumor cross-sectional
 
 ## Results
 
-The U-Net deep learning approach significantly outperforms the adaptive thresholding method, achieving 13-fold and 8-fold improvements in kidney and tumor segmentation Dice scores, respectively. Detailed results and visualizations are available in the notebook and output directories.
+U-Net significantly outperforms adaptive thresholding, achieving 13-fold and 8-fold improvements in kidney and tumor segmentation Dice scores, respectively. Detailed results and visualizations are available in the notebook and output directories.
 
 ## License
 
